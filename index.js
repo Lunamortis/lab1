@@ -1,4 +1,4 @@
-var dice = {
+var dice1 = {
     sides: 6,
     roll: function () {
       var randomNumber = Math.floor(Math.random() * this.sides) + 1;
@@ -6,7 +6,7 @@ var dice = {
     }
   }
   
-  var dice = {
+  var dice2 = {
     sides: 10,
     roll: function () {
       var randomNumber = Math.floor(Math.random() * this.sides) + 1;
@@ -26,11 +26,11 @@ var dice = {
   var button = document.getElementById('button2');
   
   button1.onclick = function() {
-    var result = dice.roll();
+    var result = dice1.roll();
     printNumber(result);
   };
   
   button2.onclick = function() {
-    var result = dice.roll();
+    var result = dice2.roll();
     printNumber(result);
   };
