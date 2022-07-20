@@ -6,7 +6,13 @@ var dice = {
     }
   }
   
-  
+  var dice = {
+    sides: 10,
+    roll: function () {
+      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+      return randomNumber;
+    }
+  }
   
   //Prints dice roll to the page
   
@@ -15,11 +21,16 @@ var dice = {
     placeholder.innerHTML = number;
   }
   
-  var button = document.getElementById('button');
+  var button = document.getElementById('button1');
+
+  var button = document.getElementById('button2');
   
-  button.onclick = function() {
+  button1.onclick = function() {
     var result = dice.roll();
     printNumber(result);
   };
   
-  
+  button2.onclick = function() {
+    var result = dice.roll();
+    printNumber(result);
+  };
